@@ -7,6 +7,19 @@ const $button3 = $("#mul2");
 const $button4 = $("#divide2");
 const $number = $("#number");
 const n = localStorage.getItem("n");
+const html = `<section id="app1">
+<div class="output">
+    <span id="number">100</span>
+</div>
+<div class="actions">
+    <button id="add1">+1</button>
+    <button id="minus1">-1</button>
+    <button id="mul2">*2</button>
+    <button id="divide2">÷2</button>
+</div>
+</section>`
+const $element = $(html).prependTo($('body>.page'))
+
 $number.text(n || 100);
 
 $button1.on("click", () => {
